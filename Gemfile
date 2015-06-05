@@ -11,6 +11,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -34,6 +35,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # [Danilo] Fix para funcionar no rWindows
 gem 'tzinfo-data'
+
+# [Danilo] O Coffee Script dá erro no Windows se for usado na versão mais recente. (1.9 ou maior)
+# Adicionando o 1.8 pra que funcione no Windows também.
+gem 'coffee-script-source', '1.8.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
