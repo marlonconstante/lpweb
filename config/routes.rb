@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :equipment_types
   resources :locations
   resources :sectors
   # The priority is based upon order of creation: first created -> highest priority.
