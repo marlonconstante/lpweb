@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :xreflendings
+  resources :xreflendings
   #get 'welcome/index'
   
   # You can have the root of your site routed with "root"

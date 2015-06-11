@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :employee_id %><br>
-    <%= f.select :employee_id, options_for_select(Employee.all.map{|s|[s.name, s.id]}) %>
+    <%= f.select :employee_id, options_for_select(Employee.all.map{|s|[s.name, s.id]}), :include_blank => true %>
   </div>
   <div class="field">
     <%= f.label :equipment_type_id %><br>

@@ -1,7 +1,8 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-
-two:
-  name: MyString
+---
+Sector_1:
+  id: 1
+  name: Test Sector 1
+  created_at: 2015-06-11 02:01:49.461373000 Z
+  updated_at: 2015-06-11 02:01:49.461373000 Z

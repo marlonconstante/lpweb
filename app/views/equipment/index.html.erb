@@ -20,8 +20,8 @@
         <td><%= equipment.serial_number %></td>
         <td><%= equipment.name %></td>
         <td><%= equipment.description %></td>
-        <td><%= equipment.employee.name %></td>
-        <td><%= equipment.equipment_type.name %></td>
+        <td><%= equipment.employee %></td>
+        <td><%= equipment.equipment_type %></td>
         <td><%= link_to 'Show', equipment %></td>
         <td><%= link_to 'Edit', edit_equipment_path(equipment) %></td>
         <td><%= link_to 'Destroy', equipment, method: :delete, data: { confirm: 'Are you sure?' } %></td>

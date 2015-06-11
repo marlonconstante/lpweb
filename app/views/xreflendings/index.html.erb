@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Xreflendings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Equipment</th>
+      <th>Employee</th>
+      <th>Lend date</th>
+      <th>Return date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @xreflendings.each do |xreflending| %>
+      <tr>
+        <td><%= xreflending.equipment %></td>
+        <td><%= xreflending.employee %></td>
+        <td><%= xreflending.lend_date %></td>
+        <td><%= xreflending.return_date %></td>
+        <td><%= link_to 'Show', xreflending %></td>
+        <td><%= link_to 'Edit', edit_xreflending_path(xreflending) %></td>
+        <td><%= link_to 'Destroy', xreflending, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Xreflending', new_xreflending_path %>

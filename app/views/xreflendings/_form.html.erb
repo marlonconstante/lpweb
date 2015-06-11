@@ -1,0 +1,34 @@
+<%= form_for(@xreflending) do |f| %>
+  <% if @xreflending.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@xreflending.errors.count, "error") %> prohibited this xreflending from being saved:</h2>
+
+      <ul>
+      <% @xreflending.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :equipment_id %><br>
+    <!-- Seleciona apenas os equipamentos sem funcionários. -->
+    <%= f.select :equipment_id, options_for_select(Equipment.where("employee_id IS ?", nil).map{|s|[s.name, s.id]}) %>
+  </div>
+  <div class="field">
+    <%= f.label :employee_id %><br>
+    <%= f.select :employee_id, options_for_select(Employee.all.map{|s|[s.name, s.id]}) %>
+  </div>
+  <div class="field">
+    <%= f.label :lend_date %><br>
+    <%= f.datetime_select :lend_date %>
+  </div>
+  <div class="field">
+    <%= f.label :return_date %><br>
+    <%= f.datetime_select :return_date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

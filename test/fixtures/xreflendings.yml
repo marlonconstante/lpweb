@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  equipment_id: 
+  employee_id: 
+  lend_date: 2015-06-11 00:46:29
+  return_date: 2015-06-11 00:46:29
+
+two:
+  equipment_id: 
+  employee_id: 
+  lend_date: 2015-06-11 00:46:29
+  return_date: 2015-06-11 00:46:29

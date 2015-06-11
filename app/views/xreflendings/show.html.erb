@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Equipment:</strong>
+  <%= @xreflending.equipment %>
+</p>
+
+<p>
+  <strong>Employee:</strong>
+  <%= @xreflending.employee %>
+</p>
+
+<p>
+  <strong>Lend date:</strong>
+  <%= @xreflending.lend_date %>
+</p>
+
+<p>
+  <strong>Return date:</strong>
+  <%= @xreflending.return_date %>
+</p>
+
+<%= link_to 'Edit', edit_xreflending_path(@xreflending) %> |
+<%= link_to 'Back', xreflendings_path %>
