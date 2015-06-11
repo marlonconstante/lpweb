@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :equipment
   resources :employees
   resources :equipment_types
   resources :locations
