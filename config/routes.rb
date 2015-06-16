@@ -11,7 +11,9 @@ Rails.application.routes.draw do
   resources :equipment_types
   resources :locations
   resources :sectors
-  resources :listing
+  
+  get 'listing' => 'listing#index'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
