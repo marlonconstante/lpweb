@@ -18,8 +18,8 @@
       <tr>
         <td><%= xreflending.equipment %></td>
         <td><%= xreflending.employee %></td>
-        <td><%= xreflending.lend_date %></td>
-        <td><%= xreflending.return_date %></td>
+        <td><%= xreflending.lend_date.strftime("%b, %m %Y - %H:%M") %></td>
+        <td><%= xreflending.return_date.strftime("%b, %m %Y - %H:%M") %></td>
         <td><%= link_to 'Show', xreflending %></td>
         <td><%= link_to 'Edit', edit_xreflending_path(xreflending) %></td>
         <td><%= link_to 'Destroy', xreflending, method: :delete, data: { confirm: 'Are you sure?' } %></td>
