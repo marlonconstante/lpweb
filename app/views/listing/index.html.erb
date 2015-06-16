@@ -5,20 +5,58 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th>Equipment Serial Number</th>
+      <th>Equipment Name</th>
+      <th>Equipment Description</th>
+      <th>Equipment Type</th>
+      <th>Employee Name</th>
+      <th>Employee Sector</th>
+      <th>Employee Location</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @listing.each do |listing| %>
+    <% @listing_associated.each do |listing_associated| %>
       <tr>
-        <td><%= listing.name %></td>
+        <td><%= link_to String(listing_associated.serial_number), listing_associated %></td>
+        <td><%= listing_associated.name %></td>
+        <td><%= listing_associated.description %></td>
+        <td><%= listing_associated.equipment_type.name %></td>
+        <td><%= link_to String(listing_associated.employee.name), listing_associated.employee %></td>
+        <td><%= listing_associated.employee.sector.name %></td>
+        <td><%= listing_associated.employee.location.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<h1>Listing Equipment Available for Lending</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Equipment Serial Number</th>
+      <th>Equipment Name</th>
+      <th>Equipment Description</th>
+      <th>Equipment Type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @listing_available.each do |listing_available| %>
+      <tr>
+        <td><%= listing_available.serial_number %></td>
+        <td><%= listing_available.name %></td>
+        <td><%= listing_available.description %></td>
+        <td><%= listing_available.equipment_type.name %></td>
+        <td><%= link_to 'Show', listing_available %></td>
+        <td><%= link_to 'Edit', edit_equipment_path(listing_available) %></td>
+        <td><%= link_to 'Destroy', listing_available, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Equipment type', new_equipment_type_path %>
