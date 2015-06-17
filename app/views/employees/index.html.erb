@@ -20,9 +20,9 @@
         <td><%= employee.name %></td>
         <td><%= employee.sector.name %></td>
         <td><%= employee.location.name %></td>
-        <td><%= link_to 'Show', employee %></td>
-        <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
-        <td><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', employee, :class => 'btn btn-default glyphicon glyphicon-eye-open' %></td>
+        <td><%= link_to 'Edit', edit_employee_path(employee), :class => 'btn btn-default glyphicon glyphicon-pencil' %></td>
+        <td><%= link_to 'Destroy', employee, :class => 'btn btn-default glyphicon glyphicon-trash', method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

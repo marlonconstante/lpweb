@@ -22,9 +22,9 @@
         <td><%= xreflending.employee %></td>
         <td><%= xreflending.lend_date.strftime("%b, %m %Y - %H:%M") %></td>
         <td><%= xreflending.return_date.strftime("%b, %m %Y - %H:%M") %></td>
-        <td><%= link_to 'Show', xreflending %></td>
-        <td><%= link_to 'Edit', edit_xreflending_path(xreflending) %></td>
-        <td><%= link_to 'Destroy', xreflending, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', xreflending, :class => 'btn btn-default glyphicon glyphicon-eye-open' %></td>
+        <td><%= link_to 'Edit', edit_xreflending_path(xreflending), :class => 'btn btn-default glyphicon glyphicon-pencil' %></td>
+        <td><%= link_to 'Destroy', xreflending, :class => 'btn btn-default glyphicon glyphicon-trash', method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

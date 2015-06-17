@@ -24,9 +24,9 @@
         <td><%= equipment.description %></td>
         <td><%= equipment.employee %></td>
         <td><%= equipment.equipment_type %></td>
-        <td><%= link_to 'Show', equipment %></td>
-        <td><%= link_to 'Edit', edit_equipment_path(equipment) %></td>
-        <td><%= link_to 'Destroy', equipment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', equipment, :class => 'btn btn-default glyphicon glyphicon-eye-open' %></td>
+        <td><%= link_to 'Edit', edit_equipment_path(equipment), :class => 'btn btn-default glyphicon glyphicon-pencil' %></td>
+        <td><%= link_to 'Destroy', equipment, :class => 'btn btn-default glyphicon glyphicon-trash', method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
