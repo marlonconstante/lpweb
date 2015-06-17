@@ -32,6 +32,8 @@
     <%= f.select :equipment_type_id, options_for_select(EquipmentType.all.map{|s|[s.name, s.id]}) %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= button_tag(type: 'submit', class: 'btn btn-primary') do %>
+        <span class="glyphicon glyphicon-floppy-disk"></span> Salvar
+    <% end %>
   </div>
 <% end %>
