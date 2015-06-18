@@ -1,63 +1,75 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <p id="notice"><%= notice %></p>
+  <div class="col-lg-12">
+    <h1 class="page-header">Listing All Equipment</h1>
+  </div>
+</div>
 
-<h1>Listing All Equipment</h1>
+<div class="row">
+  <div class="col-lg-12">
+    <table class="table table-hover table-striped">
+      <thead>
+        <tr>
+          <th>Equipment Serial Number</th>
+          <th>Equipment Name</th>
+          <th>Equipment Description</th>
+          <th>Equipment Type</th>
+          <th>Employee Name</th>
+          <th>Employee Sector</th>
+          <th>Employee Location</th>
+        </tr>
+      </thead>
+    
+      <tbody>
+        <% @listing_associated.each do |listing_associated| %>
+          <tr>
+            <td><%= link_to String(listing_associated.serial_number), listing_associated %></td>
+            <td><%= listing_associated.name %></td>
+            <td><%= listing_associated.description %></td>
+            <td><%= listing_associated.equipment_type.name %></td>
+            <td><%= link_to String(listing_associated.employee.name), listing_associated.employee %></td>
+            <td><%= listing_associated.employee.sector.name %></td>
+            <td><%= listing_associated.employee.location.name %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
 
-<table class="table table-hover table-striped">
-  <thead>
-    <tr>
-      <th>Equipment Serial Number</th>
-      <th>Equipment Name</th>
-      <th>Equipment Description</th>
-      <th>Equipment Type</th>
-      <th>Employee Name</th>
-      <th>Employee Sector</th>
-      <th>Employee Location</th>
-    </tr>
-  </thead>
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header">Listing Equipment Available for Lending</h1>
+  </div>
+</div>
 
-  <tbody>
-    <% @listing_associated.each do |listing_associated| %>
-      <tr>
-        <td><%= link_to String(listing_associated.serial_number), listing_associated %></td>
-        <td><%= listing_associated.name %></td>
-        <td><%= listing_associated.description %></td>
-        <td><%= listing_associated.equipment_type.name %></td>
-        <td><%= link_to String(listing_associated.employee.name), listing_associated.employee %></td>
-        <td><%= listing_associated.employee.sector.name %></td>
-        <td><%= listing_associated.employee.location.name %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-
-<h1>Listing Equipment Available for Lending</h1>
-
-<table class="table table-hover table-striped">
-  <thead>
-    <tr>
-      <th>Equipment Serial Number</th>
-      <th>Equipment Name</th>
-      <th>Equipment Description</th>
-      <th>Equipment Type</th>
-      <th>Visualizar</th>
-      <th>Editar</th>
-      <th>Remover</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @listing_available.each do |listing_available| %>
-      <tr>
-        <td><%= listing_available.serial_number %></td>
-        <td><%= listing_available.name %></td>
-        <td><%= listing_available.description %></td>
-        <td><%= listing_available.equipment_type.name %></td>
-        <td><%= link_to 'Show', listing_available, :class => 'btn btn-default glyphicon glyphicon-eye-open' %></td>
-        <td><%= link_to 'Edit', edit_equipment_path(listing_available), :class => 'btn btn-default glyphicon glyphicon-pencil' %></td>
-        <td><%= link_to 'Destroy', listing_available, :class => 'btn btn-default glyphicon glyphicon-trash', method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+<div class="row">
+  <div class="col-lg-12">
+    <table class="table table-hover table-striped">
+      <thead>
+        <tr>
+          <th>Equipment Serial Number</th>
+          <th>Equipment Name</th>
+          <th>Equipment Description</th>
+          <th>Equipment Type</th>
+          <th>Visualizar</th>
+          <th>Editar</th>
+          <th>Remover</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @listing_available.each do |listing_available| %>
+          <tr>
+            <td><%= listing_available.serial_number %></td>
+            <td><%= listing_available.name %></td>
+            <td><%= listing_available.description %></td>
+            <td><%= listing_available.equipment_type.name %></td>
+            <td><%= link_to 'Show', listing_available, :class => 'btn btn-default glyphicon glyphicon-eye-open' %></td>
+            <td><%= link_to 'Edit', edit_equipment_path(listing_available), :class => 'btn btn-default glyphicon glyphicon-pencil' %></td>
+            <td><%= link_to 'Destroy', listing_available, :class => 'btn btn-default glyphicon glyphicon-trash', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
