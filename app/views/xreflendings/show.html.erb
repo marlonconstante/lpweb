@@ -2,22 +2,22 @@
 
 <p>
   <strong>Equipment:</strong>
-  <%= @xreflending.equipment %>
+  <%= @xreflending.equipment ? @xreflending.equipment.name : "N/A" %>
 </p>
 
 <p>
   <strong>Employee:</strong>
-  <%= @xreflending.employee %>
+  <%= @xreflending.employee ? @xreflending.employee.name : "N/A" %>
 </p>
 
 <p>
   <strong>Lend date:</strong>
-  <%= @xreflending.lend_date %>
+  <%= @xreflending ? @xreflending.lend_date : "N/A" %>
 </p>
 
 <p>
   <strong>Return date:</strong>
-  <%= @xreflending.return_date %>
+  <%= @xreflending ? @xreflending.return_date : "N/A" %>
 </p>
 
 <%= link_to 'Edit', edit_xreflending_path(@xreflending), :class => 'btn btn-default glyphicon glyphicon-pencil' %> |

@@ -2,17 +2,17 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @employee.name %>
+  <%= @employee ? @employee.name : "N/A" %>
 </p>
 
 <p>
   <strong>Sector:</strong>
-  <%= @employee.sector.name %>
+  <%= @employee.sector    ? @employee.sector.name : "N/A" %>
 </p>
 
 <p>
   <strong>Location:</strong>
-  <%= @employee.location.name %>
+  <%= @employee.location ? @employee.location.name : "N/A" %>
 </p>
 
 <%= link_to 'Edit', edit_employee_path(@employee), :class => 'btn btn-default glyphicon glyphicon-pencil' %> |

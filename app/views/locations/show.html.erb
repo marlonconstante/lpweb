@@ -2,12 +2,12 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @location.name %>
+  <%= @location ? @location.name : "N/A" %>
 </p>
 
 <p>
   <strong>Description:</strong>
-  <%= @location.description %>
+  <%= @location ? @location.description : "N/A" %>
 </p>
 
 <%= link_to 'Edit', edit_location_path(@location), :class => 'btn btn-default glyphicon glyphicon-pencil' %> |

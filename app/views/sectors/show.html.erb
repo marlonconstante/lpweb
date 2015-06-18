@@ -2,7 +2,7 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @sector.name %>
+  <%= @sector ? @sector.name : "N/A" %>
 </p>
 
 <%= link_to 'Edit', edit_sector_path(@sector), :class => 'btn btn-default glyphicon glyphicon-pencil' %> |

@@ -10,6 +10,7 @@
       <th>Description</th>
       <th>Employee</th>
       <th>Equipment type</th>
+      <th>Available for Lending?</th>
       <th>Visualizar</th>
       <th>Editar</th>
       <th>Remover</th>
@@ -19,11 +20,12 @@
   <tbody>
     <% @equipment.each do |equipment| %>
       <tr>
-        <td><%= equipment.serial_number %></td>
-        <td><%= equipment.name %></td>
-        <td><%= equipment.description %></td>
-        <td><%= equipment.employee %></td>
-        <td><%= equipment.equipment_type %></td>
+        <td><%= equipment ? equipment.serial_number : "N/A" %></td>
+        <td><%= equipment ? equipment.name : "N/A" %></td>
+        <td><%= equipment ? equipment.description : "N/A" %></td>
+        <td><%= equipment.employee ? equipment.employee.name : "N/A" %></td>
+        <td><%= equipment.equipment_type ? equipment.equipment_type.name : "N/A" %></td>
+        <td><%= equipment.employee ? "No" : "Yes" %></td>
         <td><%= link_to 'Show', equipment, :class => 'btn btn-default glyphicon glyphicon-eye-open' %></td>
         <td><%= link_to 'Edit', edit_equipment_path(equipment), :class => 'btn btn-default glyphicon glyphicon-pencil' %></td>
         <td><%= link_to 'Destroy', equipment, :class => 'btn btn-default glyphicon glyphicon-trash', method: :delete, data: { confirm: 'Are you sure?' } %></td>
