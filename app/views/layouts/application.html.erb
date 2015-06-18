@@ -19,15 +19,18 @@
       </div>
       <div class="row">  
         <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
-            <li class="active"><%= link_to 'Summary Page', listing_path, :class => "active" %></li>
-            <li><%= link_to 'Manage Lendings', xreflendings_path %></li>
-          	<li><%= link_to 'Manage Employees', employees_path %></li>
-          	<li><%= link_to 'Manage Sectors', sectors_path %></li>
-          	<li><%= link_to 'Manage Locations', locations_path %></li>
-          	<li><%= link_to 'Manage Equipments', equipment_index_path %></li>
-          	<li><%= link_to 'Manage Equipment Types', equipment_types_path %></li>
-          </ul>
+          <div class="well sidebar-nav">
+            <ul class="nav nav-navlist">
+              <li class="nav-header">MENU</li>
+              <li class="active"><%= link_to 'Summary Page', listing_path %></li>
+              <li><%= link_to 'Manage Lendings', xreflendings_path %></li>
+            	<li><%= link_to 'Manage Employees', employees_path %></li>
+            	<li><%= link_to 'Manage Sectors', sectors_path %></li>
+            	<li><%= link_to 'Manage Locations', locations_path %></li>
+            	<li><%= link_to 'Manage Equipments', equipment_index_path %></li>
+            	<li><%= link_to 'Manage Equipment Types', equipment_types_path %></li>
+            </ul>
+          </div>
         </div>
         <div class="col-sm-9 col-md-10 main">
             <%= yield %>
