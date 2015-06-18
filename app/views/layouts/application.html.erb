@@ -7,8 +7,35 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+  
+  <div id="wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="navbar-header">
+              <span class="navbar-brand">Hey</span>
+          </div>
+        </nav>
+      </div>
+      <div class="row">  
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><%= link_to 'Summary Page', listing_path, :class => "active" %></li>
+            <li><%= link_to 'Manage Lendings', xreflendings_path %></li>
+          	<li><%= link_to 'Manage Employees', employees_path %></li>
+          	<li><%= link_to 'Manage Sectors', sectors_path %></li>
+          	<li><%= link_to 'Manage Locations', locations_path %></li>
+          	<li><%= link_to 'Manage Equipments', equipment_index_path %></li>
+          	<li><%= link_to 'Manage Equipment Types', equipment_types_path %></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-md-10 main">
+            <%= yield %>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
+
