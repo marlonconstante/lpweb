@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   
   get 'listing' => 'listing#index'
   
+  # [Danilo] Rota para dependent dropdowns
+  get "equipments/:equipment_type_id/equipments" => "equipment#equipments", :as => "equipments", :format => :json
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

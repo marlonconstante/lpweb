@@ -60,6 +60,14 @@ class EquipmentController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  #[Danilo] Listagem de equipamentos em json, para dependent dropdowns
+  def equipments
+    equipment_list = Equipment.where("equipment_type_id = ?", params[:equipment_type_id])
+    respond_to do |format|
+      format.json { render json: equipment_list }
+    end
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

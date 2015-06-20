@@ -12,9 +12,17 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :equipment_type %><br>
+    <%= select_tag :equipment_type_id, options_for_select(EquipmentType.all.map{|s|[s.name, s.id]}), :prompt => "Select an Equipment Type"  %>
+  </div>
+  <div class="field">
     <%= f.label :equipment_id %><br>
-    <!-- Seleciona apenas os equipamentos sem funcionários. -->
-    <%= f.select :equipment_id, options_for_select(Equipment.where("employee_id IS ?", nil).map{|s|[s.name, s.id]}) %>
+    <%= select_tag :equipment_id, options_from_collection_for_select([], "id", "name"), 
+      "data-option-dependent" => true,
+      "data-option-observed" => "equipment_type_id",
+      "data-option-url" => "/equipments/:equipment_type_id:/equipments",
+      "data-option-key-method" => :id,
+      "data-option-value-method" => :name %>
   </div>
   <div class="field">
     <%= f.label :employee_id %><br>
