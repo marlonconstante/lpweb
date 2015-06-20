@@ -17,6 +17,9 @@ gem 'coffee-rails', '~> 4.1.0'
 # [Danilo] Gem para gerar os fixtures a partir dos dados do banco
 gem 'db_fixtures_dump'
 
+# [Danilo] Gem para resolver o problema do javascript só carregar após o refresh
+gem 'jquery-turbolinks'
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
