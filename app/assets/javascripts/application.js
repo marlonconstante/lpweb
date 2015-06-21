@@ -19,39 +19,60 @@
 //= require turbolinks
 //= require_tree .
 
-$(function() {
-    $('.table').DataTable({});
-});
-
 jQuery(document).ready(function () {
-    
-        // [Danilo] Dependent dropdowns
-        // Copiado na cara dura de http://www.devinterface.com/blog/en/2013/12/come-implementare-in-rails-4-delle-dropdown-dipendenti-con-script-jquery-non-intrusivo/
-        $('select[data-option-dependent=true]').each(function (i) {
-            var observer_dom_id = $(this).attr('id');
-            var observed_dom_id = $(this).data('option-observed');
-            var url_mask = $(this).data('option-url');
-            var key_method = $(this).data('option-key-method');
-            var value_method = $(this).data('option-value-method');
-            var prompt = $(this).has('option[value=\'\']').size() ? $(this).find('option[value=\'\']') : $('<option value=\"\">').text('Select a equipment');
-            var regexp = /:[0-9a-zA-Z_]+:/g;
-            var observer = $('select#' + observer_dom_id);
-            var observed = $('#' + observed_dom_id);
-
-            if (!observer.val() && observed.size() > 1) {
-                observer.attr('disabled', true);
+    $('.table').DataTable({
+        'language': {
+            'sEmptyTable': 'Nenhum registro encontrado',
+            'sInfo': 'Mostrando de _START_ até _END_ de _TOTAL_ registros',
+            'sInfoEmpty': 'Mostrando 0 até 0 de 0 registros',
+            'sInfoFiltered': '(Filtrados de _MAX_ registros)',
+            'sInfoPostFix': '',
+            'sInfoThousands': '.',
+            'sLengthMenu': '_MENU_ resultados por página',
+            'sLoadingRecords': 'Carregando...',
+            'sProcessing': 'Processando...',
+            'sZeroRecords': 'Nenhum registro encontrado',
+            'sSearch': 'Pesquisar',
+            'oPaginate': {
+                'sNext': 'Próximo',
+                'sPrevious': 'Anterior',
+                'sFirst': 'Primeiro',
+                'sLast': 'Último'
+            },
+            'oAria': {
+                'sSortAscending': ': Ordenar colunas de forma ascendente',
+                'sSortDescending': ': Ordenar colunas de forma descendente'
             }
-            observed.on('change', function () {
-                observer.empty().append(prompt);
-                if (observed.val()) {
-                    url = url_mask.replace(regexp, observed.val());
-                    $.getJSON(url, function (data) {
-                        $.each(data, function (i, object) {
-                            observer.append($('<option>').attr('value', object[key_method]).text(object[value_method]));
-                            observer.attr('disabled', false);
-                        });
+        }
+    });
+
+    // [Danilo] Dependent dropdowns
+    // Copiado na cara dura de http://www.devinterface.com/blog/en/2013/12/come-implementare-in-rails-4-delle-dropdown-dipendenti-con-script-jquery-non-intrusivo/
+    $('select[data-option-dependent=true]').each(function (i) {
+        var observer_dom_id = $(this).attr('id');
+        var observed_dom_id = $(this).data('option-observed');
+        var url_mask = $(this).data('option-url');
+        var key_method = $(this).data('option-key-method');
+        var value_method = $(this).data('option-value-method');
+        var prompt = $(this).has('option[value=\'\']').size() ? $(this).find('option[value=\'\']') : $('<option value=\"\">').text('Select a equipment');
+        var regexp = /:[0-9a-zA-Z_]+:/g;
+        var observer = $('select#' + observer_dom_id);
+        var observed = $('#' + observed_dom_id);
+
+        if (!observer.val() && observed.size() > 1) {
+            observer.attr('disabled', true);
+        }
+        observed.on('change', function () {
+            observer.empty().append(prompt);
+            if (observed.val()) {
+                url = url_mask.replace(regexp, observed.val());
+                $.getJSON(url, function (data) {
+                    $.each(data, function (i, object) {
+                        observer.append($('<option>').attr('value', object[key_method]).text(object[value_method]));
+                        observer.attr('disabled', false);
                     });
-                }
-            });
+                });
+            }
         });
     });
+});
