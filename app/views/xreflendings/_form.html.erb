@@ -11,28 +11,29 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :equipment_type %><br>
-    <%= select_tag :equipment_type_id, options_for_select(EquipmentType.all.map{|s|[s.name, s.id]}), :prompt => "Select an Equipment Type"  %>
+    <%= select_tag :equipment_type_id, options_for_select(EquipmentType.all.map{|s|[s.name, s.id]}), { :prompt => "Select an Equipment Type", :class => 'form-control' } %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :equipment_id %><br>
     <%= select_tag :equipment_id, options_from_collection_for_select([], "id", "name"), 
       "data-option-dependent" => true,
       "data-option-observed" => "equipment_type_id",
       "data-option-url" => "/equipments/:equipment_type_id:/equipments",
       "data-option-key-method" => :id,
-      "data-option-value-method" => :name %>
+      "data-option-value-method" => :name,
+      :class => 'form-control' %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :employee_id %><br>
-    <%= f.select :employee_id, options_for_select(Employee.all.map{|s|[s.name, s.id]}) %>
+    <%= f.select :employee_id, options_for_select(Employee.all.map{|s|[s.name, s.id]}), {}, { :class => 'form-control' } %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :lend_date %><br>
     <%= f.datetime_select :lend_date %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :return_date %><br>
     <%= f.datetime_select :return_date %>
   </div>

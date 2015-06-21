@@ -11,25 +11,25 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :'Número de série' %><br>
-    <%= f.text_field :serial_number %>
+    <%= f.text_field :serial_number, :class => 'form-control' %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :'Nome' %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :class => 'form-control' %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label 'Descrição' %><br>
-    <%= f.text_field :description %>
+    <%= f.text_field :description, :class => 'form-control' %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :'Empregado' %><br>
-    <%= f.select :employee_id, options_for_select(Employee.all.map{|s|[s.name, s.id]}), :include_blank => true %>
+    <%= f.select :employee_id, options_for_select(Employee.all.map{|s|[s.name, s.id]}), { :include_blank => true }, { :class => 'form-control' } %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :'Tipo de equipamento' %><br>
-    <%= f.select :equipment_type_id, options_for_select(EquipmentType.all.map{|s|[s.name, s.id]}) %>
+    <%= f.select :equipment_type_id, options_for_select(EquipmentType.all.map{|s|[s.name, s.id]}), {}, { :class => 'form-control' } %>
   </div>
   <div class="actions">
     <%= button_tag(type: 'submit', class: 'btn btn-primary') do %>
