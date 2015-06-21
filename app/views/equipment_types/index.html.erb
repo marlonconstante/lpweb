@@ -21,9 +21,9 @@
         <% @equipment_types.each do |equipment_type| %>
           <tr>
             <td><%= equipment_type.name %></td>
-            <td><%= link_to 'Show', equipment_type, :class => 'btn btn-default glyphicon glyphicon-eye-open' %></td>
-            <td><%= link_to 'Edit', edit_equipment_type_path(equipment_type), :class => 'btn btn-default glyphicon glyphicon-pencil' %></td>
-            <td><%= link_to 'Destroy', equipment_type, :class => 'btn btn-default glyphicon glyphicon-trash', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to '', equipment_type, :class => 'btn btn-default glyphicon glyphicon-eye-open' %></td>
+            <td><%= link_to '', edit_equipment_type_path(equipment_type), :class => 'btn btn-default glyphicon glyphicon-pencil' %></td>
+            <td><%= link_to '', equipment_type, :class => 'btn btn-default glyphicon glyphicon-trash', method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <% end %>
       </tbody>

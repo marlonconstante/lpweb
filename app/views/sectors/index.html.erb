@@ -21,9 +21,9 @@
         <% @sectors.each do |sector| %>
           <tr>
             <td><%= sector ? sector.name : "N/A" %></td>
-            <td><%= link_to 'Show', sector, :class => 'btn btn-default glyphicon glyphicon-eye-open' %></td>
-            <td><%= link_to 'Edit', edit_sector_path(sector), :class => 'btn btn-default glyphicon glyphicon-pencil' %></td>
-            <td><%= link_to 'Destroy', sector, :class => 'btn btn-default glyphicon glyphicon-trash', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to '', sector, :class => 'btn btn-default glyphicon glyphicon-eye-open' %></td>
+            <td><%= link_to '', edit_sector_path(sector), :class => 'btn btn-default glyphicon glyphicon-pencil' %></td>
+            <td><%= link_to '', sector, :class => 'btn btn-default glyphicon glyphicon-trash', method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <% end %>
       </tbody>
