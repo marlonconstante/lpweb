@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  
+
   <div id="wrapper">
     <div class="container-fluid">
       <div class="row">
@@ -19,18 +19,21 @@
       </div>
       <div class="row">  
         <div class="col-sm-3 col-md-2 sidebar">
-          <div class="well sidebar-nav">
-            <ul class="nav nav-navlist">
-              <li class="nav-header">MENU</li>
-              <li class="active"><%= link_to 'Summary Page', listing_path %></li>
-              <li><%= link_to 'Manage Lendings', xreflendings_path %></li>
-            	<li><%= link_to 'Manage Employees', employees_path %></li>
-            	<li><%= link_to 'Manage Sectors', sectors_path %></li>
-            	<li><%= link_to 'Manage Locations', locations_path %></li>
-            	<li><%= link_to 'Manage Equipments', equipment_index_path %></li>
-            	<li><%= link_to 'Manage Equipment Types', equipment_types_path %></li>
-            </ul>
-          </div>
+          <ul class="nav nav-pills nav-stacked">
+            <li role="presentation" <%= current_page?(listing_path) || current_page?(root_path) ? 'class=active' : '' %>><%= link_to '  Principal', listing_path%></li>
+          </ul>
+          <ul class="nav nav-pills nav-stacked">
+            <li role="presentation" <%= current_page?(xreflendings_path) ? 'class=active' : '' %>><%= link_to '  Empréstimos', xreflendings_path%></li>
+          </ul>
+          <ul class="nav nav-pills nav-stacked">
+          	<li role="presentation" <%= current_page?(employees_path) ? 'class=active' : '' %>><%= link_to '  Empregados', employees_path%></li>
+          	<li role="presentation" <%= current_page?(sectors_path) ? 'class=active' : '' %>><%= link_to '  Setores', sectors_path%></li>
+          	<li role="presentation" <%= current_page?(locations_path) ? 'class=active' : '' %>><%= link_to '  Localizações', locations_path%></li>
+          </ul>
+          <ul class="nav nav-pills nav-stacked">
+          	<li role="presentation" <%= current_page?(equipment_index_path) ? 'class=active' : '' %>><%= link_to '  Equipamentos', equipment_index_path%></li>
+          	<li role="presentation" <%= current_page?(equipment_types_path) ? 'class=active' : '' %>><%= link_to '  Tipos de Equipamentos', equipment_types_path%></li>
+          </ul>
         </div>
         <div class="col-sm-9 col-md-10 main">
             <%= yield %>
