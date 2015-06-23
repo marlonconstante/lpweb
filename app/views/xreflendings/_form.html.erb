@@ -23,8 +23,11 @@
       "data-option-url" => "/equipments/:equipment_type_id:/equipments",
       "data-option-key-method" => :id,
       "data-option-value-method" => :name,
-      :class => 'form-control' %>
+      :class => 'form-control',
+      :id => 'xreflending_equipment_id',
+      :name => 'xreflending[equipment_id]' %>
   </div>
+  
   <div class="field form-group">
     <%= f.label :employee_id %><br>
     <%= f.select :employee_id, options_for_select(Employee.all.map{|s|[s.name, s.id]}), {}, { :class => 'form-control' } %>
