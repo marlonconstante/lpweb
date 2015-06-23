@@ -1,13 +1,13 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  equipment_id: 
-  employee_id: 
-  lend_date: 2015-06-11 00:46:29
-  return_date: 2015-06-11 00:46:29
-
-two:
-  equipment_id: 
-  employee_id: 
-  lend_date: 2015-06-11 00:46:29
-  return_date: 2015-06-11 00:46:29
+---
+Xreflending_1:
+  id: 298486374
+  lend_date: 2015-06-11 00:46:29.000000000 Z
+  return_date: 2015-06-11 00:46:29.000000000 Z
+  created_at: 2015-06-21 18:18:45.000000000 Z
+  updated_at: 2015-06-21 18:18:45.000000000 Z
+Xreflending_2:
+  id: 980190962
+  lend_date: 2015-06-11 00:46:29.000000000 Z
+  return_date: 2015-06-11 00:46:29.000000000 Z
+  created_at: 2015-06-21 18:18:45.000000000 Z
+  updated_at: 2015-06-21 18:18:45.000000000 Z

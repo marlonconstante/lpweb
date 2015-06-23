@@ -1,7 +1,31 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 ---
 EquipmentType_1:
   id: 1
   name: Projetor
   created_at: 2015-06-11 02:27:00.466036000 Z
   updated_at: 2015-06-11 02:27:00.466036000 Z
+EquipmentType_2:
+  id: 17
+  name: Uso Mecânica
+  created_at: 2015-06-21 20:41:59.303743000 Z
+  updated_at: 2015-06-21 20:58:34.492665000 Z
+EquipmentType_3:
+  id: 18
+  name: Uso Eletrônica
+  created_at: 2015-06-21 20:42:43.460269000 Z
+  updated_at: 2015-06-21 20:58:12.481406000 Z
+EquipmentType_4:
+  id: 19
+  name: Medições
+  created_at: 2015-06-21 20:43:41.414584000 Z
+  updated_at: 2015-06-21 20:43:41.414584000 Z
+EquipmentType_5:
+  id: 20
+  name: Uso Mecânica/Elerônica
+  created_at: 2015-06-21 21:29:45.158661000 Z
+  updated_at: 2015-06-21 21:29:57.148347000 Z
+EquipmentType_6:
+  id: 21
+  name: Uso Eletrônica/Qualidade
+  created_at: 2015-06-21 21:30:37.958681000 Z
+  updated_at: 2015-06-21 21:30:37.958681000 Z
