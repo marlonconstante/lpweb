@@ -1,13 +1,41 @@
 ---
 Xreflending_1:
   id: 298486374
-  lend_date: 2015-06-11 00:46:29.000000000 Z
-  return_date: 2015-06-11 00:46:29.000000000 Z
+  equipment_id: 9
+  employee_id: 21
+  lend_date: 2015-06-23 08:00:00.000000000 Z
+  return_date: 2015-06-24 00:46:00.000000000 Z
   created_at: 2015-06-21 18:18:45.000000000 Z
-  updated_at: 2015-06-21 18:18:45.000000000 Z
+  updated_at: 2015-06-24 00:02:39.645719000 Z
 Xreflending_2:
   id: 980190962
-  lend_date: 2015-06-11 00:46:29.000000000 Z
-  return_date: 2015-06-11 00:46:29.000000000 Z
+  equipment_id: 10
+  employee_id: 15
+  lend_date: 2015-06-23 22:00:00.000000000 Z
+  return_date: 2015-06-24 00:46:00.000000000 Z
   created_at: 2015-06-21 18:18:45.000000000 Z
-  updated_at: 2015-06-21 18:18:45.000000000 Z
+  updated_at: 2015-06-24 00:04:22.825621000 Z
+Xreflending_3:
+  id: 980190963
+  equipment_id: 3
+  employee_id: 16
+  lend_date: 2015-06-23 22:50:00.000000000 Z
+  return_date: 2015-06-25 08:00:00.000000000 Z
+  created_at: 2015-06-23 22:52:52.244150000 Z
+  updated_at: 2015-06-23 23:58:20.543900000 Z
+Xreflending_4:
+  id: 980190964
+  equipment_id: 6
+  employee_id: 17
+  lend_date: 2015-06-23 22:54:00.000000000 Z
+  return_date: 2015-06-24 08:00:00.000000000 Z
+  created_at: 2015-06-23 22:56:46.807163000 Z
+  updated_at: 2015-06-24 00:00:55.668772000 Z
+Xreflending_5:
+  id: 980190965
+  equipment_id: 2
+  employee_id: 2
+  lend_date: 2015-06-23 23:55:00.000000000 Z
+  return_date: 2015-06-24 23:55:00.000000000 Z
+  created_at: 2015-06-23 23:56:00.664899000 Z
+  updated_at: 2015-06-23 23:56:00.664899000 Z
