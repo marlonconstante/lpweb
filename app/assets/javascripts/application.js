@@ -15,11 +15,16 @@
 //= require jquery_ujs
 //= require dataTables/jquery.dataTables
 //= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
+//= require moment
+//= require moment/pt-br
+//= require bootstrap-datetimepicker
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
 
 jQuery(document).ready(function () {
+    $('.input-group.date').datetimepicker();
+
     $('.table').DataTable({
         'language': {
             'sEmptyTable': 'Nenhum registro encontrado',

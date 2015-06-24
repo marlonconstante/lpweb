@@ -34,11 +34,21 @@
   </div>
   <div class="field form-group">
     <%= f.label :lend_date %><br>
-    <%= f.datetime_select :lend_date %>
+    <div class="input-group date">
+      <%= f.text_field :lend_date, :value => @xreflending ? @xreflending.lend_date.strftime("%d/%m/%Y %H:%M") : "", :class => 'form-control' %>
+      <span class="input-group-addon">
+        <span class="glyphicon glyphicon-calendar"></span>
+      </span>
+    </div>
   </div>
   <div class="field form-group">
     <%= f.label :return_date %><br>
-    <%= f.datetime_select :return_date %>
+    <div class="input-group date">
+      <%= f.text_field :return_date, :value => @xreflending ? @xreflending.return_date.strftime("%d/%m/%Y %H:%M") : "", :class => 'form-control' %>
+      <span class="input-group-addon">
+        <span class="glyphicon glyphicon-calendar"></span>
+      </span>
+    </div>
   </div>
   <div class="actions">
     <%= button_tag(type: 'submit', class: 'btn btn-primary') do %>

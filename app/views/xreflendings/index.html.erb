@@ -25,8 +25,8 @@
           <tr>
             <td><%= xreflending.equipment ? xreflending.equipment.name : "N/A" %></td>
             <td><%= xreflending.employee ? xreflending.employee.name : "N/A" %></td>
-            <td><%= xreflending ? xreflending.lend_date.strftime("%b, %m %Y - %H:%M") : "N/A" %></td>
-            <td><%= xreflending ? xreflending.return_date.strftime("%b, %m %Y - %H:%M") : "N/A" %></td>
+            <td><%= xreflending ? xreflending.lend_date.strftime("%d/%m/%Y %H:%M") : "N/A" %></td>
+            <td><%= xreflending ? xreflending.return_date.strftime("%d/%m/%Y %H:%M") : "N/A" %></td>
             <td><%= link_to '', xreflending, :class => 'btn btn-default glyphicon glyphicon-eye-open' %></td>
             <td><%= link_to '', edit_xreflending_path(xreflending), :class => 'btn btn-default glyphicon glyphicon-pencil' %></td>
             <td><%= link_to '', xreflending, :class => 'btn btn-default glyphicon glyphicon-trash', method: :delete, data: { confirm: 'Are you sure?' } %></td>
