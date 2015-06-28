@@ -12,15 +12,15 @@
   <% end %>
 
   <div class="field form-group">
-    <%= f.label :name %><br>
+    <span class="field-label">Nome</span>:<br>
     <%= f.text_field :name, :class => 'form-control' %>
   </div>
   <div class="field form-group">
-    <%= f.label :sector_id %><br>
+    <span class="field-label">Setor:</span><br>
     <%= f.select :sector_id, options_for_select(Sector.all.map{|s|[s.name, s.id]}), {}, { :class => 'form-control' } %>
   </div>
   <div class="field form-group">
-    <%= f.label :location_id %><br>
+    <span class="field-label">Localiza&ccedil;&atilde;o:</span><br>
     <%= f.select :location_id, options_for_select(Location.all.map{|s|[s.name, s.id]}), {}, { :class => 'form-control' } %>
   </div>
   <div class="actions">
