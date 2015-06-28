@@ -12,23 +12,23 @@
   <% end %>
 
   <div class="field form-group">
-    <%= f.label :'Número de série' %><br>
+    <span class="field-label">N&uacute;mero de s&eacute;rie</span>:<br>
     <%= f.text_field :serial_number, :class => 'form-control' %>
   </div>
   <div class="field form-group">
-    <%= f.label :'Nome' %><br>
+    <span class="field-label">Nome</span>:<br>
     <%= f.text_field :name, :class => 'form-control' %>
   </div>
   <div class="field form-group">
-    <%= f.label 'Descrição' %><br>
+    <span class="field-label">Descri&ccedil;&atilde;o</span>:<br>
     <%= f.text_field :description, :class => 'form-control' %>
   </div>
   <div class="field form-group">
-    <%= f.label :'Empregado' %><br>
+    <span class="field-label">Funcion&aacute;rio</span>:<br>
     <%= f.select :employee_id, options_for_select(Employee.all.map{|s|[s.name, s.id]}), { :include_blank => true }, { :class => 'form-control' } %>
   </div>
   <div class="field form-group">
-    <%= f.label :'Tipo de equipamento' %><br>
+    <span class="field-label">Nome</span>:<br>
     <%= f.select :equipment_type_id, options_for_select(EquipmentType.all.map{|s|[s.name, s.id]}), {}, { :class => 'form-control' } %>
   </div>
   <div class="actions">
