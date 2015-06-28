@@ -1,7 +1,7 @@
 <%= form_for(@location) do |f| %>
   <% if @location.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@location.errors.count, "error") %> prohibited this location from being saved:</h2>
+      <h2><%= pluralize(@location.errors.count, "erro") %> <%= @location.errors.count > 1 ? String('impediram') : String('impediu') %> esta localiza&ccedil;&atilde;o de ser salva:</h2>
 
       <ul>
       <% @location.errors.full_messages.each do |message| %>

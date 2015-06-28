@@ -1,7 +1,7 @@
 <%= form_for(@equipment_type) do |f| %>
   <% if @equipment_type.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@equipment_type.errors.count, "error") %> prohibited this equipment_type from being saved:</h2>
+      <h2><%= pluralize(@equipment_type.errors.count, "erro") %> <%= @equipment_type.errors.count > 1 ? String('impediram') : String('impediu') %> este tipo de equipamento de ser salvo:</h2>
 
       <ul>
       <% @equipment_type.errors.full_messages.each do |message| %>

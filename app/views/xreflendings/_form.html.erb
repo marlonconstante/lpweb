@@ -1,7 +1,7 @@
 <%= form_for(@xreflending) do |f| %>
   <% if @xreflending.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@xreflending.errors.count, "error") %> prohibited this xreflending from being saved:</h2>
+      <h2><%= pluralize(@xreflending.errors.count, "erro") %> <%= @xreflending.errors.count > 1 ? String('impediram') : String('impediu') %> este empr&eacute;stimo de ser salvo:</h2>
 
       <ul>
       <% @xreflending.errors.full_messages.each do |message| %>

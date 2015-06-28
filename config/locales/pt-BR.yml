@@ -1,5 +1,29 @@
 ---
 pt-BR:
+  activerecord:
+    attributes:
+      employee:
+        name: "Nome"
+        sector: "Setor"
+        location: "Localização"
+      equipment:
+        serial_number: "Número de Série"
+        name: "Nome"
+        description: "Descrição"
+        employee: "Funcionário"
+        equipment_type: "Tipo do Equipamento"
+      sector:
+        name: "Nome"
+      location:
+        name: "Nome"
+        description: "Descrição"
+      equipment_type:
+        name: "Nome"
+      xreflending:
+        equipment: "Equipamento"
+        employee: "Funcionário"
+        lend_date: "Data de Empréstimo"
+        return_date: "Data de Devolução"
   date:
     abbr_day_names:
     - Dom
