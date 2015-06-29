@@ -22,6 +22,7 @@
 // [Danilo] Necessário para a barra do topo não fazer overlap no conteúdo da página.
 body {
   padding-top: 70px;
+  padding-bottom: 20px;
 }
 
 a.btn.glyphicon:before {
