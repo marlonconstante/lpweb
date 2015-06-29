@@ -20,6 +20,8 @@ gem 'db_fixtures_dump'
 # [Danilo] Gem para resolver o problema do javascript só carregar após o refresh
 gem 'jquery-turbolinks'
 
+gem 'devise'
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

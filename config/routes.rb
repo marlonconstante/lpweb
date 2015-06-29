@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :xreflendings
   resources :xreflendings
   #get 'welcome/index'
