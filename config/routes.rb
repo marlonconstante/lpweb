@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  resources :users
-  resources :users
-  resources :users
   resources :xreflendings
   resources :xreflendings
   #get 'welcome/index'
