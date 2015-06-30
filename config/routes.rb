@@ -14,8 +14,10 @@ Rails.application.routes.draw do
   resources :sectors
   resources :users
   
+  # Rotas de custom views
   get 'listing' => 'listing#index'
   get 'users' => 'user#index'
+  match 'users/:id' => 'users#destroy', :via => :delete, :as => :destroy_user
   
   # [Danilo] Rota para dependent dropdowns
   get "equipments/:equipment_type_id/equipments" => "equipment#equipments", :as => "equipments", :format => :json

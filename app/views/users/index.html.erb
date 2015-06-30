@@ -20,8 +20,7 @@
           <tr>
             <td><%= user_list.email %></td>
             <td><%= user_list.last_sign_in_at %></td>
-            <td><%= link_to '', edit_user_path(user_list), :class => 'btn btn-default glyphicon glyphicon-pencil' %></td>
-            <td><%= link_to '', user_list, :class => 'btn btn-default glyphicon glyphicon-trash', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to '', destroy_user_path(user_list), method: :delete, data: { confirm: "You sure?" }, :class => 'btn btn-default glyphicon glyphicon-trash', method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <% end %>
       </tbody>
