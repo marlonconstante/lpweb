@@ -29,7 +29,7 @@
             <td><%= equipment ? equipment.description : "N/A" %></td>
             <td><%= equipment.employee ? equipment.employee.name : "N/A" %></td>
             <td><%= equipment.equipment_type ? equipment.equipment_type.name : "N/A" %></td>
-            <td><%= equipment.employee ? "N&atilde;o" : "Sim" %></td>
+            <td><%= equipment.employee ? "Não" : "Sim" %></td>
             <td><%= link_to '', equipment, :class => 'btn btn-default glyphicon glyphicon-eye-open' %></td>
             <td><%= link_to '', edit_equipment_path(equipment), :class => 'btn btn-default glyphicon glyphicon-pencil' %></td>
             <td><%= link_to '', equipment, :class => 'btn btn-default glyphicon glyphicon-trash', method: :delete, data: { confirm: 'Are you sure?' } %></td>

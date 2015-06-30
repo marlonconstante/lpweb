@@ -1,20 +1,20 @@
 <p>
-  <strong>Equipment:</strong>
+  <strong>Equipamento:</strong>
   <%= @xreflending.equipment ? @xreflending.equipment.name : "N/A" %>
 </p>
 
 <p>
-  <strong>Employee:</strong>
+  <strong>Funcion&aacute;rio:</strong>
   <%= @xreflending.employee ? @xreflending.employee.name : "N/A" %>
 </p>
 
 <p>
-  <strong>Lend date:</strong>
+  <strong>Data de Empr&eacute;stimo:</strong>
   <%= @xreflending ? @xreflending.lend_date.strftime("%d/%m/%Y %H:%M") : "N/A" %>
 </p>
 
 <p>
-  <strong>Return date:</strong>
+  <strong>Data de Devolu&ccedil;&atilde;o:</strong>
   <%= @xreflending ? @xreflending.return_date.strftime("%d/%m/%Y %H:%M") : "N/A" %>
 </p>
 

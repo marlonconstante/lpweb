@@ -1,31 +1,31 @@
 <p>
-  <strong>Serial number:</strong>
+  <strong>N&uacute;mero de S&eacute;rie:</strong>
   <%= @equipment.serial_number %>
 </p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nome:</strong>
   <%= @equipment ? @equipment.name : "N/A" %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>Descri&ccedil;&atilde;o:</strong>
   <%= @equipment ? @equipment.description : "N/A" %>
 </p>
 
 <p>
-  <strong>Employee:</strong>
-  <%= @equipment.employee ? @equipment.employee : "N/A" %>
+  <strong>Funcion&aacute;rio:</strong>
+  <%= @equipment.employee ? @equipment.employee.name : "N/A" %>
 </p>
 
 <p>
-  <strong>Equipment type:</strong>
-  <%= @equipment.equipment_type ? @equipment.equipment_type : "N/A" %>
+  <strong>Tipo de Equipamento:</strong>
+  <%= @equipment.equipment_type ? @equipment.equipment_type.name : "N/A" %>
 </p>
 
 <p>
-  <strong>Available for Lending?:</strong>
-  <%= @equipment.employee ? "No" : "Yes" %>
+  <strong>Dispon&iacute;vel para Empr&eacute;stimo?:</strong>
+  <%= @equipment.employee ? "Não" : "Sim" %>
 </p>
 
 <%= link_to 'Editar', edit_equipment_path(@equipment), :class => 'btn btn-default glyphicon glyphicon-pencil' %>
