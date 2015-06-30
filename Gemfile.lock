@@ -69,6 +69,7 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    devise-i18n-views (0.3.4)
     erubis (2.7.0)
     execjs (2.5.2)
     globalid (0.3.5)
@@ -188,6 +189,7 @@ DEPENDENCIES
   coffee-script-source (= 1.8.0)
   db_fixtures_dump
   devise
+  devise-i18n-views
   jbuilder (~> 2.0)
   jquery-datatables-rails (~> 3.3.0)
   jquery-rails
