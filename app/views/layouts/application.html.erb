@@ -35,17 +35,24 @@
           <ul class="nav nav-pills nav-stacked">
             <li role="presentation" <%= current_page?(listing_path) || current_page?(root_path) ? 'class=active' : '' %>><%= link_to '  Principal', listing_path%></li>
           </ul>
+          <br>
           <ul class="nav nav-pills nav-stacked">
             <li role="presentation" <%= current_page?(xreflendings_path) ? 'class=active' : '' %>><%= link_to '  Empréstimos', xreflendings_path%></li>
           </ul>
+          <br>
           <ul class="nav nav-pills nav-stacked">
           	<li role="presentation" <%= current_page?(employees_path) ? 'class=active' : '' %>><%= link_to '  Funcionários', employees_path%></li>
           	<li role="presentation" <%= current_page?(sectors_path) ? 'class=active' : '' %>><%= link_to '  Setores', sectors_path%></li>
           	<li role="presentation" <%= current_page?(locations_path) ? 'class=active' : '' %>><%= link_to '  Localizações', locations_path%></li>
           </ul>
+          <br>
           <ul class="nav nav-pills nav-stacked">
           	<li role="presentation" <%= current_page?(equipment_index_path) ? 'class=active' : '' %>><%= link_to '  Equipamentos', equipment_index_path%></li>
           	<li role="presentation" <%= current_page?(equipment_types_path) ? 'class=active' : '' %>><%= link_to '  Tipos de Equipamentos', equipment_types_path%></li>
+          </ul>
+          <br>
+          <ul class="nav nav-pills nav-stacked">
+          	<li role="presentation" <%= current_page?(users_path) ? 'class=active' : '' %>><%= link_to '  Gerenciar Usuários', users_path %></li>
           </ul>
         </div>
         <div class="col-sm-9 col-md-10 main">

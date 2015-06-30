@@ -12,8 +12,10 @@ Rails.application.routes.draw do
   resources :equipment_types
   resources :locations
   resources :sectors
+  resources :users
   
   get 'listing' => 'listing#index'
+  get 'users' => 'user#index'
   
   # [Danilo] Rota para dependent dropdowns
   get "equipments/:equipment_type_id/equipments" => "equipment#equipments", :as => "equipments", :format => :json

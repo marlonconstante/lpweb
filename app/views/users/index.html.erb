@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header">Lista de Usu&aacute;rios</h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+    <table class="table table-hover table-striped">
+      <thead>
+        <tr>
+          <th>Email do Usu&aacute;rio</th>
+          <th>&Uacute;ltimo Login</th>
+          <th>Alterar Senha</th>
+          <th>Deletar Usu&aacute;rio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @user_list.each do |user_list| %>
+          <tr>
+            <td><%= user_list.email %></td>
+            <td><%= user_list.last_sign_in_at %></td>
+            <td><%= link_to '', edit_user_path(user_list), :class => 'btn btn-default glyphicon glyphicon-pencil' %></td>
+            <td><%= link_to '', user_list, :class => 'btn btn-default glyphicon glyphicon-trash', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+    <br>
+    <%= link_to(new_user_registration_path, class: 'btn btn-default pull-right') do %>
+      <span class="glyphicon glyphicon-plus"></span> Adicionar Usu&aacute;rio
+    <% end %>
+  </div>
+</div>
