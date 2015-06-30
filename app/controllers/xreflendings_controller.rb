@@ -25,10 +25,31 @@ class XreflendingsController < ApplicationController
   # POST /xreflendings
   # POST /xreflendings.json
   def create
+    
     @xreflending = Xreflending.new(xreflending_params)
+    
+    form_lend_date = params[:xreflending][:lend_date]
+    form_return_date = params[:xreflending][:return_date]
+    form_equipment_id = params[:xreflending][:equipment_id]
+    
+    # Valida se a data de empréstimo é maior que a data de retorno
+    if form_lend_date >= form_return_date
+      validation_error = true
+      @xreflending.errors[:base] << ("Data de retorno deve ser maior que a data de empréstimo.")
+    end
+    
+    # Busca se existe algum agendamento para este equipamento no mesmo intervalo de tempo
+    if Xreflending.where('equipment_id = ? AND ((lend_date <= ?)  AND  (return_date >= ?))', form_equipment_id, form_return_date, form_lend_date)
+      validation_error = true
+      @xreflending.errors[:base] << "Já existe um agendamento no intervalo de tempo informado."
+    end
 
     respond_to do |format|
-      if @xreflending.save
+      if !validation_error
+        save_result = @xreflending.save
+      end
+      
+      if !validation_error && save_result
         format.html { redirect_to @xreflending, notice: 'Xreflending was successfully created.' }
         format.json { render :show, status: :created, location: @xreflending }
       else
